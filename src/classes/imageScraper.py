@@ -12,7 +12,7 @@ class Scraper:
         driver = webdriver.Chrome(executable_path=config['driverPath'])
         driver.wait = WebDriverWait(driver, 5)
         driver.get("https://hanime.tv/browse/images")
-        time.sleep(5)
+        time.sleep(7)
         self.driver = driver
         self.config = config
         self.imageLinks = []
