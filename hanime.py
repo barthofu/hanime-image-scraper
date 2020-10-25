@@ -9,15 +9,16 @@
                                                                    
 github: https://github.com/barthofu
 personal website: https://barthofu.me
+
 '''
 
 
-from src import scraperClass #import the sweet class that will make all the work for us ;P
+from src.classes import imageScraper #import the sweet class that will make all the work for us ;P
 
 config = {
     
     "targetPath": './hanime_images/', #path to the directory where the images will be downloaded (can be either relative or absolute)
-    "driverPath": "./chromedriver.exe", #path to the Chrome's driver, leave it as it is
+    "driverPath": "./src/drivers/chromedriver.exe", #path to the Chrome's driver, leave it as it is
     
     "showLinks": False, #print every link when they are scraped
     
@@ -37,7 +38,7 @@ config = {
 
 
 #let's fucking go 
-scraper = scraperClass.Scraper(config).run()
+scraper = imageScraper.Scraper(config).run()
 
 
 
